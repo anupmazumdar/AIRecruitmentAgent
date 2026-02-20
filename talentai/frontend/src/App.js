@@ -1501,7 +1501,7 @@ function TechnicalQuizStage({ candidateData, setCandidateData, setStage }) {
   const generateQuestions = async () => {
     setLoading(true);
     try {
-      const apiKey = process.env.REACT_APP_GEMINI_API_KEY || 'AIzaSyCBgr0CY6Q8o7l6Nxzl4wA7M4TdFLR-m6w';
+      const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
       
       const response = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
